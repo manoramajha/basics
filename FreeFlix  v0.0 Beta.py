@@ -8,7 +8,7 @@ print ('Hello Welcome to FreeFlix v0.0 Beta ')
 time.sleep(0.5)
 print('Make sure you have a torrent client like Bittorrent/uTorrent')
 time.sleep(0.5)
-print('Enter the name of the movie. Be as precise as possible. Include year of release \n, language or prefered definition to get accurate results ')
+print('Enter the name of the movie. Be as precise as possible. Include year of release , language or prefered definition to get accurate results ')
 movie_name = input()
 #breaking down the string the user entered to make it url-ready
 string_list = movie_name.split(" ")
@@ -32,11 +32,11 @@ for links in soup.findAll('a',{'class': "cellMainLink"}):
     name = links.string
     names.append(name)
 
-for linkss in soup.findAll('a', {'title': "Download torrent file"}):
+for linkss in soup.findAll('a', {'title': "Torrent magnet link"}):
     href = linkss.get("href")
     lunks = 'https:' + href
     torrent_links.append(lunks)
-print('Files are arranged from descending order of no. of seeds ')
+print('\n\nFiles are arranged from descending order of no. of seeds ')
 for n in range(1,10):
 # converting all the data into strings to make sure it is easy to add them to display the reults  
     p = str(sizes[n])
