@@ -13,7 +13,7 @@ def spider(max):
             and before clicking enter click on inspect element and go to network and then click enter.
             there will be a AJAX link . that is the specific link which has all the raw data of results,
             which can be separated into different cells using delimiters in any spreadsheet application '''
-        url = "http://schools9.com/andhra/2016/2ndyear/i2-gen-2016-ap.aspx?htno=" + str(X
+        url = "http://schools9.com/andhra/2016/2ndyear/i2-gen-2016-ap.aspx?htno=" + str(X)
         # the script sleeps for 20 secs for every 2500 halltickets to avoid crashing the server
         if X % 2500 == 0:
             time.sleep(20)
