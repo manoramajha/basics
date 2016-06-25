@@ -33,5 +33,5 @@ def spider(max):
     # Close the csv file. Now the csv file is saved in the home folder
     text_file.close()
 
-spider(1603253701)
+spider(1603210101)
 
